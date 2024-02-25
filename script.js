@@ -19,9 +19,8 @@ currencies.forEach((currency) => {
   toDropDown.add(option);
 });
 
-
 fromDropDown.value = "USD";
-toDropDown.value = "UZS";
+toDropDown.value = "";
 
 let convertCurrency = () => {
   const amount = document.querySelector("#amount").value;
@@ -42,11 +41,9 @@ let convertCurrency = () => {
         )} ${toCurrency}`;
       });
   } else {
-    alert("Iltimos miqdoeni kiriting");
+    alert("Iltimos miqdorni kiriting");
   }
 };
 
-document
-  .querySelector("#convert-button")
-  .addEventListener("click", convertCurrency);
+document.querySelector("#convert-button").addEventListener("click", convertCurrency);
 window.addEventListener("load", convertCurrency);
